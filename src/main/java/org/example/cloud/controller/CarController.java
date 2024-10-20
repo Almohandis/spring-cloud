@@ -33,4 +33,21 @@ public class CarController {
         Car car = carService.findById(id);
         return ResponseEntity.ok(car);
     }
+
+    @PatchMapping
+    public ResponseEntity<Car> updateCar(@RequestBody Car car) {
+        Car updatedCar = carService.update(car);
+        return ResponseEntity.ok(updatedCar);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteCar(@PathVariable Long id) {
+        carService.delete(id);
+        return ResponseEntity.ok("Car deleted successfully");
+    }
+
+//    @GetMapping("/get-all-admins")
+//    public ResponseEntity<String> getAllAdmins() {
+//        return ResponseEntity.ok(carService.getAllAdmins());
+//    }
 }
