@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @FeignClient(name = "ADMIN")
 public interface AdminClient {
-
-    @GetMapping("/admins")
-    String getAllAdmins();
+    @GetMapping
+        // ("/admins")
+    String findAllAdmins();
 }

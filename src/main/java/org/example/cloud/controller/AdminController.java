@@ -17,9 +17,9 @@ public class AdminController {
         this.adminClient = adminClient;
     }
 
-    @GetMapping("all-admins")
+    @GetMapping("/get-admins")
     public ResponseEntity<String> getAdmins() {
 //        return restTemplate.getForObject("http://localhost:8089", String.class);
-        return ResponseEntity.ok(adminClient.getAllAdmins());
+        return ResponseEntity.ok(adminClient.findAllAdmins());
     }
 }
