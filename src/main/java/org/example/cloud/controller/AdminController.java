@@ -15,6 +15,6 @@ public class AdminController {
 
     @GetMapping("admins")
     public String getAdmins() {
-        return restTemplate.getForObject("http://localhost:8089/admins", String.class);
+        return restTemplate.getForObject("http://localhost:8089", String.class);
     }
 }
